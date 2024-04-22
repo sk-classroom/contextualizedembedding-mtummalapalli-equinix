@@ -39,8 +39,8 @@ class TestContextualEmbedding(unittest.TestCase):
         clf = LinearDiscriminantAnalysis(n_components=K - 1).fit(X, labels)
         score2 = clf.score(X, labels)
         assert (
-            score > score2
-        ), f"The non-contextual embedding should be less discriminative than the contextual embedding."
+            score < score2
+        ), f"The non-contextual embedding should be less discriminative than the contextual embedding. "
 
 
 if __name__ == "__main__":
