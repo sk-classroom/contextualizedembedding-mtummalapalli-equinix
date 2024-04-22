@@ -40,7 +40,7 @@ class TestContextualEmbedding(unittest.TestCase):
         score2 = clf.score(X, labels)
         assert (
             score < score2
-        ), f"The non-contextual embedding should be less discriminative than the contextual embedding."
+        ), f"The non-contextual embedding should be less discriminative than the contextual embedding. "
 
 
 if __name__ == "__main__":
